@@ -1,0 +1,44 @@
+{
+  "name": "svelte-anim-tiny-gpt2",
+  "config_file": "configs/svelte-anim-tiny.yaml",
+  "config": {
+    "model": "sshleifer/tiny-gpt2",
+    "dataset": {
+      "path": "data/svelte-animations/train.jsonl"
+    },
+    "sft": {
+      "output_dir": "outputs/svelte-anim-tiny",
+      "max_steps": 60,
+      "per_device_train_batch_size": 8,
+      "learning_rate": 0.0005,
+      "logging_steps": 5,
+      "max_length": 256,
+      "seed": 42,
+      "report_to": "none",
+      "use_cpu": true,
+      "save_strategy": "no"
+    },
+    "record": {
+      "dir": "runs",
+      "name": "svelte-anim-tiny-gpt2"
+    }
+  },
+  "finished_at": "2026-08-23T21:36:33.609230+00:00",
+  "train_rows": 42,
+  "final_metrics": {
+    "train_runtime": 33.2009,
+    "train_samples_per_second": 14.457,
+    "train_steps_per_second": 1.807,
+    "total_flos": 98058240.0,
+    "train_loss": 10.73959395090739,
+    "epoch": 10.0
+  },
+  "versions": {
+    "torch": "2.13.0+cpu",
+    "transformers": "5.15.1",
+    "trl": "1.10.0",
+    "peft": "0.20.0",
+    "datasets": "5.0.1",
+    "accelerate": "1.14.0"
+  }
+}
