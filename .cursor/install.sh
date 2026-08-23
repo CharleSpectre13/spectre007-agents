@@ -30,12 +30,14 @@ if [ -f package.json ]; then
 fi
 
 # --- Python ------------------------------------------------------------------
-if [ -f uv.lock ] || { [ -f pyproject.toml ] && command -v uv >/dev/null 2>&1; }; then
-  log "uv sync"
-  uv sync
-elif [ -f poetry.lock ] || { [ -f pyproject.toml ] && command -v poetry >/dev/null 2>&1; }; then
-  log "poetry install"
-  poetry install
+if [ -f uv.lock ] || [ -f pyproject.toml ]; then
+  if ! command -v uv >/dev/null 2>&1; then
+    log "installing uv"
+    curl -LsSf https://astral.sh/uv/install.sh | sh
+  fi
+  export PATH="$HOME/.local/bin:$PATH"
+  log "uv sync --frozen"
+  uv sync --frozen
 elif [ -f requirements.txt ]; then
   log "pip install -r requirements.txt"
   python3 -m pip install --user -r requirements.txt
