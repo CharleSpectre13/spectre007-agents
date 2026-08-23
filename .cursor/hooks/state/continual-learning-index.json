@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "updatedAt": "2026-08-23T21:53:30Z",
+  "localTranscriptsDir": "~/.cursor/projects/workspace/agent-transcripts",
+  "localTranscripts": {},
+  "cloudAgentTranscripts": {
+    "bc-3e347667-f661-4c76-bf67-79ed315508f3": {
+      "name": "Training environment",
+      "branch": "cursor/training-environment-08f3",
+      "fetchedVia": "cursor-cloud batch-fetch-details",
+      "processedAt": "2026-08-23T21:53:30Z",
+      "messageCount": 267,
+      "lastUserMessageIndex": 166,
+      "transcriptBytes": 360352
+    }
+  }
+}
