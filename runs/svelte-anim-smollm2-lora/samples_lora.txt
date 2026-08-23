@@ -1,0 +1,29 @@
+=== PROMPT ===
+# Svelte documentation: transition:
+
+A _transition_ is triggered by
+=== OUTPUT ===
+# Svelte documentation: transition:
+
+A _transition_ is triggered by a click event.
+
+For example, the following code
+
+<transition :onclick="() { ... }">
+
+will trigger a click event when the user clicks the <transition> element.
+
+If the transition is not enabled, the user can not see the contents of the
+
+=== PROMPT ===
+The animate: directive is used
+=== OUTPUT ===
+The animate: directive is used in the following way:
+
+<animate:dir >
+
+The animator is always present when the directive is executed.
+
+In order to move the animator from the top of the object to the bottom of the object, use the following syntax:
+
+<animate:dir >

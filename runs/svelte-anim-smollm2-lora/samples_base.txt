@@ -1,0 +1,23 @@
+=== PROMPT ===
+# Svelte documentation: transition:
+
+A _transition_ is triggered by
+=== OUTPUT ===
+# Svelte documentation: transition:
+
+A _transition_ is triggered by a set of conditions. The conditions are specified in the following form:
+
+A transition is triggered when a condition is met.
+
+A condition is specified by a list of two values, the condition and the transition. The condition must be a set of integers. The first integer indicates the value
+
+=== PROMPT ===
+The animate: directive is used
+=== OUTPUT ===
+The animate: directive is used to add an animate to the active node.
+
+In the following example, we are using the animate directive to animate the tree node, the child nodes and the parent nodes of the tree node.
+
+
+The node.setAnimate method is used to set the animate of the node.
+
