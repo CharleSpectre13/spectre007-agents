@@ -1,0 +1,22 @@
+=== PROMPT ===
+# Svelte documentation: transition:
+
+A _transition_ is triggered by
+=== OUTPUT ===
+# Svelte documentation: transition:
+
+A _transition_ is triggered by an element (such as an element in Svelte) that is in an `opacity` transition. The `opacity` of the element will be updated as it progresses, with the `start` and `end` values being the `0` and `1` values, respectively.
+
+=== PROMPT ===
+The animate: directive is used
+=== OUTPUT ===
+The animate: directive is used to animate a model or component that is not a reactive component.
+
+```js
+/// @noErrors
+{#each items in t }
+	<div animate:animate={t}>${items}</div>
+{/each}
+```
+
+##

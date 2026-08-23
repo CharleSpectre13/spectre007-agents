@@ -1,0 +1,62 @@
+{
+  "name": "svelte-anim-smollm2-lora-max",
+  "config_file": "configs/svelte-anim-smollm2-lora-max.yaml",
+  "config": {
+    "model": "HuggingFaceTB/SmolLM2-135M",
+    "dataset": {
+      "path": "data/svelte-animations/train.jsonl"
+    },
+    "lora": {
+      "r": 32,
+      "lora_alpha": 64,
+      "lora_dropout": 0.05,
+      "target_modules": [
+        "q_proj",
+        "k_proj",
+        "v_proj",
+        "o_proj",
+        "gate_proj",
+        "up_proj",
+        "down_proj"
+      ],
+      "task_type": "CAUSAL_LM"
+    },
+    "sft": {
+      "output_dir": "outputs/svelte-anim-smollm2-lora-max",
+      "max_steps": 150,
+      "per_device_train_batch_size": 2,
+      "gradient_accumulation_steps": 4,
+      "learning_rate": 0.0002,
+      "lr_scheduler_type": "cosine",
+      "warmup_steps": 10,
+      "logging_steps": 5,
+      "max_length": 768,
+      "seed": 42,
+      "report_to": "none",
+      "use_cpu": true,
+      "save_strategy": "no"
+    },
+    "record": {
+      "dir": "runs",
+      "name": "svelte-anim-smollm2-lora-max"
+    }
+  },
+  "finished_at": "2026-08-23T22:12:41.511158+00:00",
+  "train_rows": 42,
+  "final_metrics": {
+    "train_runtime": 1579.1083,
+    "train_samples_per_second": 0.76,
+    "train_steps_per_second": 0.095,
+    "total_flos": 388892158131456.0,
+    "train_loss": 0.7634922258059184,
+    "epoch": 25.0
+  },
+  "versions": {
+    "torch": "2.13.0+cpu",
+    "transformers": "5.15.1",
+    "trl": "1.10.0",
+    "peft": "0.20.0",
+    "datasets": "5.0.1",
+    "accelerate": "1.14.0"
+  }
+}
