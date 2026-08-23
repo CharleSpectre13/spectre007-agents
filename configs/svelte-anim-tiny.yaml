@@ -1,0 +1,22 @@
+# Sanity run on the Svelte animations dataset: full fine-tune of a tiny
+# random-weights GPT-2 to validate the data pipeline end to end on CPU.
+model: sshleifer/tiny-gpt2
+
+dataset:
+  path: data/svelte-animations/train.jsonl
+
+sft:
+  output_dir: outputs/svelte-anim-tiny
+  max_steps: 60
+  per_device_train_batch_size: 8
+  learning_rate: 5.0e-4
+  logging_steps: 5
+  max_length: 256
+  seed: 42
+  report_to: none
+  use_cpu: true
+  save_strategy: "no"
+
+record:
+  dir: runs
+  name: svelte-anim-tiny-gpt2
